@@ -204,7 +204,7 @@ var SeleniumGridInstance = function (name, baseBrowserDecorator, args, logger) {
           log.debug(self.name + ' started');
           if (args.browserName !== 'safari') {
             var windowRef = self.browser.getWindowHandle();
-            self.browser.switchTo().frame(0);
+            //self.browser.switchTo().frame(0);
             var query = self.browser.wait(until.elementLocated(wd.By.id('player')))
               .then(() => {
                 log.debug('Trying to focus ' + self.name + ' with an alert...');
